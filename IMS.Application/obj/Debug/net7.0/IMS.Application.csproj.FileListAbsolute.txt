@@ -1,0 +1,15 @@
+C:\Users\zainm\source\repos\IMS\IMS.Application\bin\Debug\net7.0\IMS.Application.deps.json
+C:\Users\zainm\source\repos\IMS\IMS.Application\bin\Debug\net7.0\IMS.Application.dll
+C:\Users\zainm\source\repos\IMS\IMS.Application\bin\Debug\net7.0\IMS.Application.pdb
+C:\Users\zainm\source\repos\IMS\IMS.Application\bin\Debug\net7.0\Domain.dll
+C:\Users\zainm\source\repos\IMS\IMS.Application\bin\Debug\net7.0\Domain.pdb
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.csproj.AssemblyReference.cache
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.AssemblyInfoInputs.cache
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.AssemblyInfo.cs
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.csproj.CoreCompileInputs.cache
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.csproj.CopyComplete
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.dll
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\refint\IMS.Application.dll
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\IMS.Application.pdb
+C:\Users\zainm\source\repos\IMS\IMS.Application\obj\Debug\net7.0\ref\IMS.Application.dll

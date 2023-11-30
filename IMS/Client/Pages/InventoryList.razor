@@ -1,0 +1,53 @@
+﻿@page "/inventorylist"
+@using IMS.Client.Contracts.Inventories;
+@using IMS.Client.Controls
+@using IMS.Client.Models;
+@inherits ComponentBase;
+
+
+<PageTitle>Inventory List</PageTitle>
+
+<ViewInventories SearchButton="OnSearchButton"></ViewInventories>
+<div>
+    @if (Inventories != null)
+    {
+        <table  class=" table table-success table-striped" style="margin-top:10px" >
+            <thead style="margin-right:20px;margin-left:20px">
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody style="margin-right:50px;margin-left:50px">
+                @foreach (var item in Inventories)
+                {
+                   <InventoryItem inventory="item"></InventoryItem>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+@code {
+    [Inject]
+    public IInvetoryServices inventoryServices { get; set; } = default!;
+    private int currentCount = 0;   
+    public IEnumerable<InventoryModel>? Inventories { get; set; }
+    public void OnSearchButton(IEnumerable<InventoryModel> model)
+    {
+        Inventories = model;
+        StateHasChanged();
+
+    }
+    protected  override async Task  OnInitializedAsync()
+    {
+        var inventories =await  inventoryServices.GetInventories("");
+        Inventories = inventories;
+    }
+   
+
+
+   
+}

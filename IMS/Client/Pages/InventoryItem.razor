@@ -1,0 +1,29 @@
+﻿@page "/inventoryitem"
+@using IMS.Client.Models;
+
+@if (inventory != null)
+
+{
+    <tr>
+        <td>@inventory?.InventoryName</td>
+        <td>@inventory?.Quantity</td>
+        <td>@inventory?.Price.ToString("c")</td>
+        <td>
+            <button type="button" class="btn btn-light" @onclick="()=>EditButtonClick(inventory.InventoryId)">Edit</button>
+        </td>
+    </tr>
+}
+
+
+@code {
+    [Inject]
+    public NavigationManager navigationManager { get; set; } = default!;
+
+    [Parameter]
+    public InventoryModel? inventory { get; set; }
+
+    public void EditButtonClick(int id)
+    {
+        navigationManager.NavigateTo($"/editinventory/{id}");
+    }
+}

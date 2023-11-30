@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = IMS.Client
+build_property.RootNamespace = IMS.Client
+build_property.ProjectDir = C:\Users\zainm\source\repos\IMS\IMS\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\zainm\source\repos\IMS\IMS\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Controls/ViewProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVmlld1Byb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/AddInventory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkSW52ZW50b3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/EditInventory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEludmVudG9yeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/InventoryItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52ZW50b3J5SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/InventoryList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52ZW50b3J5TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/ProductItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Pages/ProductList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Shared/NavBar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdkJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Controls/ViewInventories.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVmlld0ludmVudG9yaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-wacwt0qkpi
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-p0h8j7vcmp
+
+[C:/Users/zainm/source/repos/IMS/IMS/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-n9sh763xup

@@ -1,0 +1,26 @@
+﻿@using IMS.Client.Contracts.Products;
+@using IMS.Client.Models;
+<div style="display:grid; grid-template-columns:1fr 70px;margin-right:20px;margin-left:20px">
+    <input type="text"
+           placeholder="Type Product Name To Search"
+           @bind-value="ProductToSearch"
+           @bind-value:event="oninput"
+           @onkeypress="GetAllInventories" />
+    <button style="background-color:grey" @onclick="GetAllInventories" type="button" class="input-group-text btn-success">View</button>
+</div>
+
+@code {
+    [Inject]
+    public IProductServices? _services { get; set; }
+
+    [Parameter]
+    public EventCallback<IEnumerable<ProductModel>> SearchButton { get; set; }
+
+    public string? ProductToSearch { get; set; }
+    public async void GetAllInventories()
+    {
+        var result = await _services.GetProducts(ProductToSearch);
+        await SearchButton.InvokeAsync(result);
+
+    }
+}

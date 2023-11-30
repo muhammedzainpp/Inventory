@@ -1,0 +1,24 @@
+﻿@using IMS.Client.Models;
+@if (product != null)
+
+{
+    <tr>
+        <td>@product?.ProductName</td>
+        <td>@product?.Quantity</td>
+        <td>@product?.Price.ToString("c")</td>
+       
+    </tr>
+}
+
+@code {
+    [Inject]
+    public NavigationManager navigationManager { get; set; } = default!;
+
+    [Parameter]
+    public ProductModel? product { get; set; }
+
+    public void EditButtonClick(int id)
+    {
+        navigationManager.NavigateTo($"/editinventory/{id}");
+    }
+}

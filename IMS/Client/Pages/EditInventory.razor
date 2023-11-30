@@ -1,0 +1,78 @@
+﻿@page "/editinventory/{Id:int}"
+@using IMS.Client.Contracts.Inventories;
+@using IMS.Client.Models;
+<EditForm Model="@Model" OnValidSubmit="Submit" style="width:700px;margin-left:30px">
+    <DataAnnotationsValidator />
+    <h3>Edit Inventory</h3>
+    <div class="form-group row">
+        <label for="InventoryName" class="col-sm-2 col-form-label">
+            InventoryName
+        </label>
+        <div class="col-sm-10">
+            <InputText id="InventoryName" class="form-control" placeholder="InventoryName" @bind-Value="Model.InventoryName" />
+            <ValidationMessage For="@(() => Model.InventoryName)" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group row">
+        <label for="Quantity" class="col-sm-2 col-form-label">
+            Quantity
+        </label>
+        <div class="col-sm-10">
+            <InputNumber id="Quantity" class="form-control" placeholder="Quantity" @bind-Value="Model.Quantity" />
+            <ValidationMessage For="@(() => Model.Quantity)" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group row">
+        <label for="Price" class="col-sm-2 col-form-label">
+            Price
+        </label>
+        <div class="col-sm-10">
+            <InputNumber id="Price" class="form-control" placeholder="Price"
+                         @bind-Value="Model.Price" />
+            <ValidationMessage For="@(() => Model.Quantity)" />
+        </div>
+    </div>
+
+    <br />
+
+    <button style="align-items:center" class="btn btn-light" type="submit">Edit</button>
+</EditForm>
+
+
+@code{
+    [Inject]
+    public IToastService toastService { get; set; } = default!;
+
+    [Inject]
+    public IInvetoryServices invetoryServices { get; set; } = default!;
+
+    [Inject]
+    public NavigationManager navigationManager { get; set; } = default!;
+
+    [Parameter]
+    public int Id { get; set; }
+    public InventoryModel Model { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Model= await invetoryServices.GetInventoryById(Id);
+    }
+    public async Task Submit()
+    {
+        try
+        {
+            await invetoryServices.AddInventory(Model);
+            toastService.ShowSuccess("inventory edited successfully");
+            navigationManager.NavigateTo("/inventorylist");
+        }
+        catch(Exception ex)
+        {
+            toastService.ShowError(ex.Message);
+        }
+    }
+
+}
+

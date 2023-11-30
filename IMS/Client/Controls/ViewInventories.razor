@@ -1,0 +1,32 @@
+﻿@using IMS.Client.Contracts.Inventories;
+@using IMS.Client.Models;
+    <div style="display:grid; grid-template-columns:1fr 70px;margin-right:20px;margin-left:20px" >
+    <input type="text"
+        placeholder="Type Invetory Name To Search"
+        @bind-value="InventoryTosearch"
+        @bind-value:event="oninput"
+        @onkeypress="GetAllInventories"/>
+        <button style="background-color:grey"  @onclick="GetAllInventories" type="button" class="input-group-text btn-success">View</button>
+    </div>
+@code
+
+{
+    [Inject]
+    public IInvetoryServices? _services { get; set; }
+
+    [Parameter]
+    public EventCallback<IEnumerable<InventoryModel>> SearchButton { get; set; }
+
+    public string? InventoryTosearch { get; set; }
+    public async void GetAllInventories()
+    {
+        var result = await _services.GetInventories(InventoryTosearch);
+        await SearchButton.InvokeAsync(result);
+       
+    }
+}
+
+
+
+
+

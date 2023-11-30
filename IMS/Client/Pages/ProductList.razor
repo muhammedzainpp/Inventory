@@ -1,0 +1,47 @@
+﻿@page "/productlist"
+@using IMS.Client.Contracts.Products;
+@using IMS.Client.Controls
+@using IMS.Client.Models;
+<ViewProducts SearchButton="OnSearchButton"></ViewProducts>
+<div>
+    @if (Products != null)
+    {
+        <table  class=" table table-success table-striped" style="margin-top:10px" >
+            <thead style="margin-right:20px;margin-left:20px">
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                   
+
+                </tr>
+            </thead>
+            <tbody style="margin-right:50px;margin-left:50px">
+                @foreach (var item in Products)
+                {
+                   <ProductItem product="item"></ProductItem>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    [Inject]
+    public IProductServices productServices { get; set; } = default!;
+    private int currentCount = 0;
+    public IEnumerable<ProductModel>? Products { get; set; }
+    public void OnSearchButton(IEnumerable<ProductModel> model)
+    {
+        Products = model;
+        StateHasChanged();
+
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        var products = await productServices.GetProducts("");
+        Products = products;
+    }
+
+
+}
